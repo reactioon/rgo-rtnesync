@@ -141,9 +141,6 @@ Resume:
 ```
 *Alert:* The total of tests is subjective, only to explain how the results will be.
 
-That's all!  
-The future is now!
-
 ## Resume
 
 ```shell
@@ -153,6 +150,7 @@ cd /reactioon
 mkdir logs
 cd ~
 mkdir rgo
+cd rgo
 wget https://github.com/reactioon/rgo-rtnesync/raw/master/builds/rtnesync-unix
 chmod +x rtnesync-unix
 ./rtnesync-unix -test=/reactioon/rtnesync_test.txt
@@ -162,6 +160,9 @@ ifconfig
 systemctl start rtnesync.service
 tail -f /reactioon/logs/rtnesync.log
 ```
+
+That's all!  
+The future is now!
 
 ---
 
