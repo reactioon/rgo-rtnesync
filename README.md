@@ -2,20 +2,19 @@
 
 R Package is a set of tools created by Reactioon to connect the dots. The tools will work to enhance on reactioon a lot of aspects like high availability, fail over, data processing, analysis, and will improve reactioon to work with large amount of data and users. Offering the Reactioon Network a mix of web and standalone tools that will works online and offline.
 
-## (R) Package / RTNESYNC
+# (R) Package / rtnesync
 
-RTNESYNC is the package to sync data from exchanges to Reactioon. This will only work on machines to collect asset data at exchanges using the users computational resources, like internet, cpu and disk space. If you want, see below how to install it on your computer.
+`rtnesync` is the package to sync data from exchanges to Reactioon. This will only work on machines to collect asset data at exchanges using the user computer resources, like internet, cpu and disk space. If you want, see below how to install it on your computer.
 
-## Requirements
+### Requirements
 
 ```
 1. Reactioon Account
 2. Reactioon Node License
 3. PC with Debian 11 or CentOS 7 installed.
 ```
-**Note:** The `license` of node can be get with RTN inside of `Network` in `Reactioon Account`, and you need the knowledge of your operation system (linux, osx, windows) to manage the node.
-
-## Scope
+**Note:**  
+The `license` of node can be get with `RTN` inside of `Network` in your `Reactioon Account`, and you need the knowledge of your system (linux, osx, windows) to manage the node.
 
 By default `RTNSYNC` is part of (R) Package and it will use the `reactioon` folder inside of your OS (linux,osx,windows).   
 
@@ -36,31 +35,37 @@ After execute the command above you will have an directory in the path `/reactio
 
 **Note:** Reactioon folder will be used by all tools of (R) Package, not only by RTNESYNC.
 
-### Linux
+#### Linux
 
-To install RTNESYNC on your computer nothing needs to be installed, and the process is too easy. check the steps below:
+To install `RTNESYNC` on your linux nothing needs to be installed, and the process is too easy. check the steps below:
 
-1. Download the package 
+**1. Download the package** 
 
 ```
 cd ~
-wget github.com/reactioon/rtnesync/builds/rtnesync-unix
+wget https://github.com/reactioon/rgo-rtnesync/raw/master/builds/rtnesync-unix
 ```
 
-2. Run installer
+**2. Run installer**
 
+Get network interface associated with your network interface
+```
+ifconfig
+```
+
+Go to user folder and set `uid` and `iface` to run the installer.
 ```
 cd ~
 ./rtnesync-unix -install=yes -install-os=linux-debian11 -uid={UID OF NODE} -iface=eth0
 ```
 **Note:** If you want install on Centos7, just change the `-install-os` to `linux-centos7`.
 
-3. Start service
+**3. Start service**
 
 ```
 systemctl start rtnesync.service
 ```
-**Note:** After reboot your machine the service will auto start, to disable it, use disable on systemctl `systemctl disable rtnesync.service`.
+**Note:** After reboot your machine the service will auto start, to disable it, use disable on systemctl `systemctl disable rtnesync.service`
 
 ### OSX
 
