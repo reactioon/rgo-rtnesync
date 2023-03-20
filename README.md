@@ -44,6 +44,7 @@ To install `RTNESYNC` on your linux nothing needs to be installed, and the proce
 ```
 cd ~
 wget https://github.com/reactioon/rgo-rtnesync/raw/master/builds/rtnesync-unix
+chmod +x rtnesync-unix
 ```
 
 **2. Run installer**
