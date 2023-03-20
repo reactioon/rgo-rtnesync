@@ -24,7 +24,7 @@ By default `RTNSYNC` is part of (R) Package and it will use the `reactioon` fold
 
 The process to install RTNESYNC on your computer is easy, but reactioon folders is required.
 
-```
+```shell
 cd /
 mkdir /reactioon
 cd /reactioon
@@ -41,7 +41,7 @@ To install `RTNESYNC` on your linux nothing needs to be installed, and the proce
 
 **1. Download the package** 
 
-```
+```shell
 cd ~
 wget https://github.com/reactioon/rgo-rtnesync/raw/master/builds/rtnesync-unix
 chmod +x rtnesync-unix
@@ -50,12 +50,12 @@ chmod +x rtnesync-unix
 **2. Run installer**
 
 Get network interface associated with your network interface
-```
+```shell
 ifconfig
 ```
 
 Go to user folder and set `uid` and `iface` to run the installer.
-```
+```shell
 cd ~
 ./rtnesync-unix -install=yes -install-os=linux-debian11 -uid={node_uid} -iface={network_interface}
 ```
@@ -115,6 +115,10 @@ tail -f rtnesync_err.log
 ```
 *Note:* The logs will store an limit number of lines, to increase set in flag.
 
+## Update
+
+The process to update RTNESYNC to the latest version is simple, download the latest version and run the install command again. This will remove old files and create new with the latest version.
+
 ## Tests
 
 To run tests you will need inform the file with test data, if file don't exists, they will be created on first run with latest tests covered.
@@ -139,6 +143,25 @@ Resume:
 
 That's all!  
 The future is now!
+
+## Resume
+
+```shell
+cd /
+mkdir reactioon
+cd /reactioon
+mkdir logs
+cd ~
+mkdir rgo
+wget https://github.com/reactioon/rgo-rtnesync/raw/master/builds/rtnesync-unix
+chmod +x rtnesync-unix
+./rtnesync-unix -test=/reactioon/rtnesync_test.txt
+cat /reactioon/rtnesync/apps/_license.json
+ifconfig
+./rtnesync-unix -install=yes -install-os=linux-debian11 -uid={node_uid} -iface={network_interface}
+systemctl start rtnesync.service
+tail -f /reactioon/logs/rtnesync.log
+```
 
 ---
 
