@@ -25,6 +25,7 @@ By default `RTNSYNC` is part of (R) Package and it will use the `reactioon` fold
 The process to install RTNESYNC on your computer is easy, but reactioon folders is required.
 
 ```shell
+sudo su
 cd /
 mkdir /reactioon
 cd /reactioon
@@ -144,6 +145,7 @@ Resume:
 ## Resume
 
 ```shell
+sudo su
 cd /
 mkdir reactioon
 cd /reactioon
