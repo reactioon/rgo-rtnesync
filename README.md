@@ -56,7 +56,7 @@ ifconfig
 Go to user folder and set `uid` and `iface` to run the installer.
 ```
 cd ~
-./rtnesync-unix -install=yes -install-os=linux-debian11 -uid={UID OF NODE} -iface=eth0
+./rtnesync-unix -install=yes -install-os=linux-debian11 -uid={node_uid} -iface={network_interface}
 ```
 **Note:** If you want install on Centos7, just change the `-install-os` to `linux-centos7`.
 
@@ -94,6 +94,7 @@ To change behaviour of your RTNESYNC you can use aditional properties, see the l
 | -install-os |  | linux-debian11|linux-centos7 | OS to install | 
 | --- | --- | --- | --- |
 | -app | rtnesync | * | app name for the binaries. | 
+| -logs-folder | | * | directory to store log files | 
 | -logs-limit | 100 | * | limit of lines inside of log file | 
 | -daemon | no | yes|no | start the service with always running | 
 | -version | --- | --- | show the version of rtnesync | 
